@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f7f8fa;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f8fa;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(169, 121, 43, 0.22);
+  color: #0b1f3a;
+}
+
+.section-kicker {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.subhead {
+  color: #0b1f3a;
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.25rem);
+  line-height: 1.18;
+}
+
+.download-link {
+  align-items: center;
+  background: #0b1f3a;
+  border: 1px solid #0b1f3a;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.download-link.subtle {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0b1f3a;
+}
+
+.download-link:hover {
+  background: #ffffff;
+  color: #0b1f3a;
+}
+
+.download-link.subtle:hover {
+  border-color: #0b1f3a;
+}
+
+.download-link:focus-visible {
+  outline: 2px solid #a9792b;
+  outline-offset: 2px;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
